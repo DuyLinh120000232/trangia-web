@@ -50,17 +50,19 @@
     padding-bottom: 50px;
 }
 
+.gioithieu-text {
+}
+
 .gioithieu-img {
     width: 100%;
     height: fit-content;
 }
 
-.my-card + .my-card {
-}
 #sanphamchinh{
     background-image: url('/assets/img/bg_gg.jpg');
     background-size: cover;
 }
+
 .section-title{
     display: flex;
     justify-content: center;
@@ -72,6 +74,21 @@
     border-radius: 52px;
     box-shadow: 1px 3px 2px #aaacaa;
     text-align: center;
+}
+
+
+
+.card {
+    height: 330px;
+    overflow: hidden;
+}
+
+.card > img {
+    transition: transform 0.5s;
+}
+
+.card:hover > img {
+    transform: scale(1.05) ;
 }
 
 .card-img {
@@ -134,3 +151,29 @@
 .map {
     width: 100%;
 }
+
+/* MY CARD */
+.my-card{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.my-card-img{
+    width: 100%;
+    transition: transform 0.5s;
+}
+.my-card-title{
+    position: absolute;
+    bottom: 5%;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.my-card:hover > .my-card-img {
+    transform: scale(1.1, 1.1);
+}
+/* END MY CARD */

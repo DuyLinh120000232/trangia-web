@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./assets/libraries/fontawesome-free-6.0.0-beta3-web/css/all.min.css">
     <script src="./assets/libraries/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     <script src="./assets/libraries/fontawesome-free-6.0.0-beta3-web/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <!-- END LIBRARY -->
 
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -23,7 +24,7 @@
         <!-- CONTAINER -->
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light"> 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <img class="header__logo" src="https://banhchungbabahoi.com/wp-content/uploads/2020/03/logo-banh-chung.png" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +33,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active color-main" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active color-main" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link color-main" href="#">Features</a>
@@ -44,7 +45,7 @@
                             <a class="nav-link dropdown-toggle color-main" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown link
                             </a>
-                            <ul class="dropdown-menu bg-main" aria-labelledby="navbarDropdownMenuLink">
+                            <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item color-main" href="#">Action</a></li>
                             <li><a class="dropdown-item color-main" href="#">Another action</a></li>
                             <li><a class="dropdown-item color-main" href="#">Something else here</a></li>
@@ -85,7 +86,7 @@
         <section id="gioithieu">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-md-6 col-12">
+                    <div class="gioithieu-text col-lg-8 col-md-6 col-12">
                         <p>
                             <strong>Giới Thiệu</strong>
                         </p>
@@ -102,20 +103,24 @@
                             <i class="icon-mini"></i>
                             Bánh chưng được ví như mặt đất, tượng trưng cho sự đủ đầy, ấm no và hạnh phúc. Bánh Chưng Trần Gia với bí quyết gia truyền và mùi thơm lan tỏa đã tạo nên hương vị tết cổ truyền của người Việt không lần vào đâu được... 
                         </p>
-                        <p class="d-none">
+                        <p class="gioithieu__chitiet d-none">
                             <i class="icon-mini"></i>
                             Sản phẩm còn có màu sắc xanh tươi mơn mởn do được ngâm trong nước lá dong, thay vì phẩm màu hóa chất. Nhờ đó vừa giúp bề ngoài bánh có màu sắc thu hút.
                         </p>
-                        <p class="d-none">
+                        <p class="gioithieu__chitiet d-none">
                             <i class="icon-mini"></i>
                             Bánh Chưng Trần Gia được sản xuất đảm bảo an toàn vệ sinh thực phẩm, có nhãn mác, thương hiệu, nguồn gốc rõ ràng, giá cả phải chăng phù hợp cho khách hàng sử dụng hàng ngày hoặc làm sính lễ trong cưới, hỏi, đám tiệc hiếu, hỉ; biếu tặng người thân, bạn bè và đối tác…
                         </p>
-                        <a href="#" class="btn btn-outline-success rounded-pill">
+                        <button id="btn-less" class="btn btn-outline-success rounded-pill d-none">
+                            Thu gọn
+                            <i class="fas fa-angle-double-left ms-1"></i>
+                        </button>
+                        <button id="btn-more" class="btn btn-outline-success rounded-pill">
                             Đọc thêm
                             <i class="fas fa-angle-double-right ms-1"></i>
-                        </a>
+                        </button>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-12 d-flex justify-content-center">
+                    <div class="col-lg-4 col-md-6 col-12 mt-3 mt-md-0 d-flex justify-content-center">
                         <img class="gioithieu-img" src="./assets/img/banh-chung-xanh-2-300x300.jpg" alt="">
                     </div>
                 </div>
@@ -130,62 +135,31 @@
                     <h3 class="section-title-main">SẢN PHẨM CHÍNH</h3>
                 </div>
                 <div class="row">
-                    <div class="my-card col-lg-3 col-md-4 col-6 mt-3">
-                        <div class="card">
-                            <img src="./assets/img/banh-chung-xanh-2-300x300.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick e make up the bulk of the card's content.</p>
-                            </div>
+                    <div class="col-lg-3 col-md-4 col-6 mt-3">
+                        <div class="my-card">
+                            <img class="my-card-img" src="./assets/img/banh-chung-xanh-2-300x300.jpg" alt="">
+                            <p class="my-card-title">bánh chưng</p>
                         </div>
                     </div>
-                    <div class="my-card col-lg-3 col-md-4 col-6 mt-3">
-                        <div class="card">
-                            <img src="./assets/img/banh-chung-xanh-2-300x300.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick e make up the bulk of the card's content.</p>
-                            </div>
+                    <div class="col-lg-3 col-md-4 col-6 mt-3">
+                        <div class="my-card">
+                            <img class="my-card-img" src="./assets/img/banh-chung-xanh-2-300x300.jpg" alt="">
+                            <p class="my-card-title">bánh chưng</p>
                         </div>
                     </div>
-                    <div class="my-card col-lg-3 col-md-4 col-6 mt-3">
-                        <div class="card">
-                            <img src="./assets/img/banh-chung-xanh-2-300x300.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick e make up the bulk of the card's content.</p>
-                            </div>
+                    <div class="col-lg-3 col-md-4 col-6 mt-3">
+                        <div class="my-card">
+                            <img class="my-card-img" src="./assets/img/banh-chung-xanh-2-300x300.jpg" alt="">
+                            <p class="my-card-title">bánh chưng</p>
                         </div>
                     </div>
-                    <div class="my-card col-lg-3 col-md-4 col-6 mt-3">
-                        <div class="card">
-                            <img src="./assets/img/banh-chung-xanh-2-300x300.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick e make up the bulk of the card's content.</p>
-                            </div>
+                    <div class="col-lg-3 col-md-4 col-6 mt-3">
+                        <div class="my-card">
+                            <img class="my-card-img" src="./assets/img/banh-chung-xanh-2-300x300.jpg" alt="">
+                            <p class="my-card-title">bánh chưng</p>
                         </div>
                     </div>
-                    <div class="my-card col-lg-3 col-md-4 col-6 mt-3">
-                        <div class="card">
-                            <img src="./assets/img/banh-chung-xanh-2-300x300.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick e make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="my-card col-lg-3 col-md-4 col-6 mt-3">
-                        <div class="card">
-                            <img src="./assets/img/banh-chung-xanh-2-300x300.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick e make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="my-card col-lg-3 col-md-4 col-6 mt-3">
-                        <div class="card">
-                            <img src="./assets/img/banh-chung-xanh-2-300x300.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick e make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -199,10 +173,10 @@
                     <h3 class="section-title-main">TIN TỨC</h3>
                 </div>
                 <div class="row">
-                    <div class="my-card col-lg-3 col-md-4 col-6 mt-3">
+                    <div class=" col-lg-3 col-md-4 col-6 mt-3">
                         <a class="decoration-none" target="_blank" href="http://ttxtdldongnai.vn/vi-tet-trong-banh-chung-tran-gia">
                             <div class="card">
-                                <img class="card-img" src="./assets/img/banh chung 5.jpg" class="card-img-top" alt="...">
+                                <img class="card-img card-img-top" src="./assets/img/banh chung 5.jpg" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title color-black">Vị Tết Trong Bánh Chưng Trần Gia.</h5>
                                     <p class="card-text color-black">Tại huyện Vĩnh Cửu, tỉnh Đồng Nai, có một người đàn ông được mệnh danh là "ông trùm" bánh chưng...</p>
@@ -210,10 +184,10 @@
                             </div>
                         </a>
                     </div>
-                    <div class="my-card col-lg-3 col-md-4 col-6 mt-3">
+                    <div class=" col-lg-3 col-md-4 col-6 mt-3">
                         <a class="decoration-none" target="_blank" href="https://tuoitre.vn/hang-chuc-tan-banh-chung-tet-xuat-ngoai-1044322.htm">
                             <div class="card">
-                                <img class="card-img" src="./assets/img/0f729a53.jpg" class="card-img-top" alt="...">
+                                <img class="card-img card-img-top" src="./assets/img/0f729a53.jpg" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title color-black   ">Hàng Chục Tấn Bánh Chưng Tết Xuất Ngoại.</h5>
                                     <p class="card-text color-black">TT - Các đơn hàng chủ yếu ở các nước có nhiều Việt kiều sinh sống như Mỹ, Úc, Canada, Pháp, Đức...</p>
@@ -221,10 +195,10 @@
                             </div>
                         </a>
                     </div>
-                    <div class="my-card col-lg-3 col-md-4 col-6 mt-3">
+                    <div class=" col-lg-3 col-md-4 col-6 mt-3">
                         <a class="decoration-none" target="_blank" href="https://zingnews.vn/vua-banh-chung-xuat-ngoai-post624071.html">
                             <div class="card">
-                                <img class="card-img" src="./assets/img/banh_zing_1.jpg" class="card-img-top" alt="...">
+                                <img class="card-img card-img-top" src="./assets/img/banh_zing_1.jpg" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title color-black   ">Vựa Bánh Chưng Xuất Ngoại.</h5>
                                     <p class="card-text color-black">Mỗi dịp Tết đến, "vua" bánh chưng 39 tuổi gói hàng chục tấn xuất khẩu sang 10 quốc gia trên thế giới...</p>
@@ -232,10 +206,10 @@
                             </div>
                         </a>
                     </div>
-                    <div class="my-card col-lg-3 col-md-4 col-6 mt-3">
+                    <div class=" col-lg-3 col-md-4 col-6 mt-3">
                         <a class="decoration-none" target="_blank" href="https://tienphong.vn/banh-chung-xuat-ngoai-post610768.tpo">
                             <div class="card">
-                                <img class="card-img" src="./assets/img/2af134f82ce0ee2e32801974bded5359.jpg " class="card-img-top" alt="...">
+                                <img class="card-img card-img-top" src="./assets/img/2af134f82ce0ee2e32801974bded5359.jpg " alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title color-black   ">Bánh Chưng Xuất Ngoại.</h5>
                                     <p class="card-text color-black">TP - Đến hẹn lại lên, kiều bào Việt Nam ở nước ngoài lại được thưởng thức bánh chưng Việt Nam để nhớ đến hương vị Tết ở quê nhà.</p>
